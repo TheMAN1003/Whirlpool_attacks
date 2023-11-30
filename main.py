@@ -4,6 +4,7 @@ import random
 import time
 import numpy as np
 from scipy import stats
+import matplotlib.pyplot as plt
 
 
 def whirl(message):
@@ -151,6 +152,12 @@ for j in range(100):
     difficulty.append(result[2])
 
 print(difficulty)
+plt.hist(difficulty, bins='auto', alpha=0.7, rwidth=0.85)
+plt.title('Гістограма')
+plt.xlabel('Значення')
+plt.ylabel('Частота')
+plt.grid(axis='y', alpha=0.75)
+plt.show()
 mean = np.mean(difficulty)
 variance = np.var(difficulty, ddof=1)
 confidence_interval = stats.t.interval(0.95, len(difficulty) - 1, loc=mean, scale=stats.sem(difficulty))
@@ -176,6 +183,12 @@ for j in range(100):
     difficulty.append(result[2])
 
 print(difficulty)
+plt.hist(difficulty, bins='auto', alpha=0.7, rwidth=0.85)
+plt.title('Гістограма')
+plt.xlabel('Значення')
+plt.ylabel('Частота')
+plt.grid(axis='y', alpha=0.75)
+plt.show()
 mean = np.mean(difficulty)
 variance = np.var(difficulty, ddof=1)
 confidence_interval = stats.t.interval(0.95, len(difficulty) - 1, loc=mean, scale=stats.sem(difficulty))
@@ -203,6 +216,12 @@ for j in range(100):
     difficulty.append(result[2])
 
 print(difficulty)
+plt.hist(difficulty, bins='auto', alpha=0.7, rwidth=0.85)
+plt.title('Гістограма')
+plt.xlabel('Значення')
+plt.ylabel('Частота')
+plt.grid(axis='y', alpha=0.75)
+plt.show()
 mean = np.mean(difficulty)
 variance = np.var(difficulty, ddof=1)
 confidence_interval = stats.t.interval(0.95, len(difficulty) - 1, loc=mean, scale=stats.sem(difficulty))
@@ -230,6 +249,12 @@ for j in range(100):
     difficulty.append(result[2])
 
 print(difficulty)
+plt.hist(difficulty, bins='auto', alpha=0.7, rwidth=0.85)
+plt.title('Гістограма')
+plt.xlabel('Значення')
+plt.ylabel('Частота')
+plt.grid(axis='y', alpha=0.75)
+plt.show()
 mean = np.mean(difficulty)
 variance = np.var(difficulty, ddof=1)
 confidence_interval = stats.t.interval(0.95, len(difficulty) - 1, loc=mean, scale=stats.sem(difficulty))
@@ -238,4 +263,3 @@ print(variance)
 print(confidence_interval)
 time_end = time.time()
 print("time elapsed: ", time_end-time_start)
-
